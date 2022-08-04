@@ -9,51 +9,31 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
+        VStack.init( spacing: 10 ) {
+            LinearGradient(gradient: Gradient(stops: [
+                .init(color: .white, location: 0.45),
+                .init(color: .black, location: 0.55),
+            ]), startPoint: .top, endPoint: .bottom)
+            
+            RadialGradient(gradient: Gradient(colors: [.blue, .black]), center: .center, startRadius: 20, endRadius: 200)
+            AngularGradient(gradient: Gradient(colors: [.red, .yellow, .green, .blue, .purple, .red]), center: .center)
+            
+        }.ignoresSafeArea()
         
-        VStack {
-            HStack(alignment: .center, spacing: 25) {
-                Spacer()
-                Text("H1")
-                Spacer()
-                Text("H2")
-                Spacer()
-                Text("H2")
-                Spacer()
-            }
-            Spacer()
-            HStack(alignment: .center, spacing: 25) {
-                Spacer()
-                Text("H1")
-                Spacer()
-                Text("H2")
-                Spacer()
-                Text("H2")
-                Spacer()
-            }
-            Spacer()
-            HStack(alignment: .center, spacing: 25) {
-                Spacer()
-                Text("H1")
-                Spacer()
-                Text("H2")
-                Spacer()
-                Text("H2")
-                Spacer()
-            }
-            VStack(alignment: .center, spacing: 40) {
-                Spacer()
-                Text("V1")
-                Spacer()
-                Text("V2")
-                Spacer()
-            }
-            ZStack(alignment: .center) {
-                Spacer()
-                Text("V1   ")
-                Spacer()
-                Text("   V2")
-            }
-        }
+        //        ZStack {
+        //            VStack(spacing: 0) {
+        //                Color.red
+        //                Color.blue
+        //                Color.green
+        //            }
+        //
+        //            Text("Your content")
+        //                .foregroundStyle(.secondary)
+        //                .padding(50)
+        //                .background(.ultraThinMaterial)
+        //                .font(Font.title)
+        //        }
+        //        .ignoresSafeArea()
     }
 }
 
