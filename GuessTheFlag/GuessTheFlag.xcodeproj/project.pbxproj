@@ -11,6 +11,8 @@
 		CC3448BA28927CBE00ABE4F7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3448B928927CBE00ABE4F7 /* ContentView.swift */; };
 		CC3448BC28927CC000ABE4F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC3448BB28927CC000ABE4F7 /* Assets.xcassets */; };
 		CC3448BF28927CC000ABE4F7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC3448BE28927CC000ABE4F7 /* Preview Assets.xcassets */; };
+		CCFFAA9728A24EBA0080CF26 /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFFAA9628A24EBA0080CF26 /* Buttons.swift */; };
+		CCFFAA9928A258050080CF26 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFFAA9828A258050080CF26 /* Images.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		CC3448B928927CBE00ABE4F7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CC3448BB28927CC000ABE4F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CC3448BE28927CC000ABE4F7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CCFFAA9628A24EBA0080CF26 /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
+		CCFFAA9828A258050080CF26 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +55,10 @@
 		CC3448B628927CBE00ABE4F7 /* GuessTheFlag */ = {
 			isa = PBXGroup;
 			children = (
+				CCFFAA9828A258050080CF26 /* Images.swift */,
 				CC3448B728927CBE00ABE4F7 /* GuessTheFlagApp.swift */,
 				CC3448B928927CBE00ABE4F7 /* ContentView.swift */,
+				CCFFAA9628A24EBA0080CF26 /* Buttons.swift */,
 				CC3448BB28927CC000ABE4F7 /* Assets.xcassets */,
 				CC3448BD28927CC000ABE4F7 /* Preview Content */,
 			);
@@ -138,7 +144,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC3448BA28927CBE00ABE4F7 /* ContentView.swift in Sources */,
+				CCFFAA9928A258050080CF26 /* Images.swift in Sources */,
 				CC3448B828927CBE00ABE4F7 /* GuessTheFlagApp.swift in Sources */,
+				CCFFAA9728A24EBA0080CF26 /* Buttons.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,6 +285,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -306,6 +315,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
