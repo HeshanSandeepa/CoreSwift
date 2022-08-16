@@ -92,7 +92,7 @@ struct WeSplitContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct WeSplit_Previews: PreviewProvider {
     static var previews: some View {
         WeSplitContentView()
     }
