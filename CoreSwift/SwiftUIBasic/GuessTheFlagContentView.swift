@@ -11,87 +11,101 @@ import SwiftUI
 struct GuessTheFlagContentView: View {
     
     
-    var countries = ["Estonia", "France", "Germany",  "Ireland", "Italy", "Nigeria", "Polnad", "Russia", "Spain", "US", "UK"]
+    @State private var countries = ["Estonia", "France", "Germany",  "Ireland", "Italy",
+                                    "Nigeria", "Poland", "Russia", "Spain", "US", "UK"].shuffled()
     
-    var correctAnswer = Int.random(in: 0...2)
+    @State private var correctAnswer = Int.random(in: 0...2)
     
     
+    @State private var shwoingScore  = false
+    @State private var scoreTitle = ""
     
-    
-    //@State private var  showingAlert =  false
     
     var body: some View {
         
         ZStack {
-            Color.blue.ignoresSafeArea()
+            //            LinearGradient(gradient: Gradient(colors: [.blue, .black]),
+            //                           startPoint: .top,
+            //                           endPoint: .bottom)
+            RadialGradient(stops: [.init(color: Color(.sRGB, red: 0.1, green: 0.2, blue: 0.45, opacity: 1.0), location: 0.3), .init(color: Color(.sRGB, red: 0.76, green: 0.15, blue: 0.26, opacity: 1.0), location: 0.3)],
+                           center: .top,
+                           startRadius: 200,
+                           endRadius: 700)
+                .ignoresSafeArea()
             
-            VStack(spacing: 30) {
-                VStack {
-                    Text("Tap the flag of").foregroundColor(.white)
-                    Text(countries[correctAnswer]).foregroundColor(.white)
-                }
+            
+            VStack {
                 
-                ForEach(0..<3) { number in
-                    Button {
+                Spacer()
+                
+                Text("Guess The Flag")
+                    .font(.largeTitle.weight(.bold))
+                    .foregroundColor(.white)
+                
+                VStack(spacing: 15) {
+                    VStack {
+                        Text("Tap the flag of")
+                            .foregroundStyle(.secondary)
+                            .font(.subheadline.weight(.heavy))
                         
-                    } label: {
-                        Image(countries[number]).renderingMode(.original)
+                        Text(countries[correctAnswer])
+                            .font(.largeTitle.weight(.semibold))
+                    }
+                    
+                    ForEach(0..<3) { number in
+                        Button {
+                            onFlagTapped(number)
+                        } label: {
+                            Image(countries[number]).renderingMode(.original)
+                                .clipShape(Capsule())
+                                .shadow(radius: 5)
+                        }
                     }
                 }
+                .frame( maxWidth: .infinity)
+                .padding(.vertical, 20)
+                .clipShape(RoundedRectangle(cornerRadius: 20))
+                .background(.regularMaterial)
+                
+                Spacer()
+                
+                Spacer()
+                
+                Text("Text Score ??")
+                    .font(.title.weight(.bold))
+                    .foregroundColor(.white)
+                Spacer()
+                
             }
+            
+            .padding()
+            
+            
         }
-        
-        
-        //        VStack {
-        //            Button("Delete", role: .destructive,  action:  {
-        //                print("Deleted") }
-        //            ).buttonStyle(.bordered)
-        //
-        //            Button("Delete Two") {
-        //                print("Deleted Two")
-        //            }.buttonStyle(.borderedProminent)
-        //
-        //
-        //            Button("Delete Three", action: onDeleted)
-        //
-        //            Button("Delete", role: .destructive,  action:  {
-        //                print("Deleted") }
-        //            ).buttonStyle(.borderedProminent)
-        //                .tint(.mint)
-        //
-        //
-        //            Button {
-        //                print("Custom Button")
-        //            } label: {
-        //
-        //
-        //                Text("Custom Button").padding()
-        //                    .foregroundColor(.white)
-        //                    .background(.red)
-        //            }
-        //
-        //            Button {
-        //                print("Custom Button")
-        //            } label: {
-        //
-        //                Label("EDIT", systemImage: "pencil")
-        //            }
-        //
-        //            Spacer()
-        //
-        //            Button("Alert") {
-        //                showingAlert = true
-        //            }
-        //            .alert("This is Alert", isPresented: $showingAlert, actions: {
-        //                Button("Ok", role: .cancel) {}
-        //                Button("Cancel", role: .destructive) {}
-        //            })
-        //
-        //        }
+        .alert(scoreTitle, isPresented: $shwoingScore) {
+            Button("Continue", action: askQuestion)
+        } message: {
+            Text("Your score is ???")
+        }
     }
     
     func onDeleted() {
         print("Deleted Three")
+    }
+    
+    func onFlagTapped(_ number: Int) {
+        if number == correctAnswer {
+            scoreTitle = "Correct"
+        } else {
+            scoreTitle = "Wrong"
+        }
+        
+        shwoingScore = true
+    }
+    
+    func askQuestion() {
+        countries.shuffle()
+        correctAnswer = Int.random(in: 0...2)
     }
 }
 

@@ -1,0 +1,26 @@
+MVC
+Very popular upon two things
+
+01. Well represents the concept of seperation of concerns
+02. Very easy to explain. easy to learn & easy to impelement
+
+Seperation of Concerns
+
+M - holds the app state/ data / Domain
+DBs, Repositories, Files, Clouds etc
+
+C - receives input from view, change app state upon business logic
+    collborate between V & M
+    
+V - represent app state
+    take inputs from user
+    
+    
+Massive View Controller
+
+earned the nickname, as Controller might end up with lots of code.
+Becasue Views represent app state, models holds data & all the other work
+is done by Controller.
+
+
+    

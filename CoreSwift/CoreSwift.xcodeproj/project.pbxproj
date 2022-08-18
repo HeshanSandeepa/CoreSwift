@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC125D2D28AE1B60000BABF5 /* readme in Resources */ = {isa = PBXBuildFile; fileRef = CC125D2C28AE1B60000BABF5 /* readme */; };
 		CC76865928AB72B900B82C52 /* CoreSwiftApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC76865828AB72B900B82C52 /* CoreSwiftApp.swift */; };
 		CC76865B28AB72B900B82C52 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC76865A28AB72B900B82C52 /* ContentView.swift */; };
 		CC76865D28AB72BB00B82C52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC76865C28AB72BB00B82C52 /* Assets.xcassets */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CC125D2C28AE1B60000BABF5 /* readme */ = {isa = PBXFileReference; lastKnownFileType = text; path = readme; sourceTree = "<group>"; };
 		CC76865528AB72B900B82C52 /* CoreSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC76865828AB72B900B82C52 /* CoreSwiftApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreSwiftApp.swift; sourceTree = "<group>"; };
 		CC76865A28AB72B900B82C52 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 		CC76868C28AB7D0F00B82C52 /* MVC */ = {
 			isa = PBXGroup;
 			children = (
+				CC125D2C28AE1B60000BABF5 /* readme */,
 			);
 			path = MVC;
 			sourceTree = "<group>";
@@ -270,6 +273,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC125D2D28AE1B60000BABF5 /* readme in Resources */,
 				CC76868828AB7CEA00B82C52 /* Preview Assets.xcassets in Resources */,
 				CC76868528AB7CEA00B82C52 /* Assets.xcassets in Resources */,
 			);
